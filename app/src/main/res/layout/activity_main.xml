@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/asd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elige un número..."
+            android:textSize="25dp" />
+
+        <NumberPicker
+            android:id="@+id/np"
+            android:theme="@style/AppTheme.Picker"
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            android:layout_below="@id/tv"
+            android:layout_marginLeft="50px"
+            android:layout_gravity="center" />
+
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:ems="10"
+            android:hint="maximo"
+            android:backgroundTint="#39a355"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:ems="10"
+            android:hint="minimo(0)"
+            android:backgroundTint="#39a355"
+            android:inputType="number" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:text="Activar modo noche" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="168dp"
+            android:layout_height="157dp"
+            android:layout_gravity="center_vertical">
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:buttonTint="#A5AAB8"
+                android:text="Mostrar todos los numeros del 1 al 100" />
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:buttonTint="#A5AAB8"
+                android:text="Ignorar numeros primos del 1 al 100" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#A5AAB8"
+                android:text="Mostrar numeros entre min y max" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="#A5AAB8"
+                android:text="Descomponer numero exacto" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="100px"
+            android:ems="10"
+            android:hint="número exacto"
+            android:backgroundTint="#39a355"
+            android:inputType="number" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
